@@ -40,6 +40,6 @@ fi
 read -p "Ready to deploy. Are you sure? [y/n] "
 if [[ $REPLY =~ ^[Yy]$ ]]; then
     echo deploying...
-    eb deploy
+    eb deploy odr-${env}
     echo deploy script finished!
 fi
