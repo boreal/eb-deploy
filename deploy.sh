@@ -11,6 +11,9 @@ env=$1
 
 if [ "${env}" == "qa" ] || [ "${env}" == "prod" ]; then
     echo "configuring for environment: ${env}"
+else
+    echo 'error: supported environment names are "qa" or "prod"'
+    exit 1
 fi
 
 if [ ! -d .ebextensions ]; then
